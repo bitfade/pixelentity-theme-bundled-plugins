@@ -1,5 +1,6 @@
 Copy the library in your theme folder, then in functions.php
 
+```php
 require_once("pixelentity-theme-bundled-plugins/class-pixelentity-theme-bundled-plugins.php");
 PixelentityThemeBundledPlugins::init(
 									 array(
@@ -23,13 +24,17 @@ PixelentityThemeBundledPlugins::init(
 												 )
 										   )
 									 );
+```
 
 To display table of plugins, Somewhere in your theme options page, use:
 
+```php
 echo PixelentityThemeBundledPlugins::$instance->options();
+```
 
 Since plugin zips files are hosted inside theme folder, "PluginURI" in plugin header must match the "slug" used upon inited, example:
 
+```php
 <?php
 /*
   Plugin Name: Pixelentity Framework Theme Plugin
@@ -41,3 +46,4 @@ Since plugin zips files are hosted inside theme folder, "PluginURI" in plugin he
   License: GPL2
 */
 ?>
+```
