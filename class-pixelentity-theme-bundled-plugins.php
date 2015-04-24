@@ -140,7 +140,7 @@ if (!class_exists("PixelentityThemeBundledPlugins")) {
 		public function activate_action_link($file) {
 			$ref = urlencode($_SERVER['HTTP_REFERER']);
 			$ufile = urlencode($file);
-			$url = wp_nonce_url(self_admin_url('plugins.php?action=activate&pe-theme-bundle-redirect=$ref&plugin=$ufile'), 'activate-plugin_$file');
+			$url = wp_nonce_url(self_admin_url("plugins.php?action=activate&pe-theme-bundle-redirect=$ref&plugin=$ufile"), "activate-plugin_$file");
 			return sprintf(
 				'<a id="pe-theme-bundled-plugins-redirect" href="%s" target="_parent">%s</a>',
 				esc_url($url),
