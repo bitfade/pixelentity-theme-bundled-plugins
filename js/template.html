@@ -1,0 +1,29 @@
+<div class="option option-plugins option-import">
+	<h4>Required Plugins</h4>
+	<div class="section">
+        <div class="element">
+			<input id="pe_theme_options_plugins_" type="button" value="Install / Activate / Update All Plugins" name="pe_theme_options[plugins]" class="button pe-theme-import"  />
+			<div class="bottom" id="pe_theme_options_plugins__messages">
+				<div id="pe_theme_options_plugins__saving" class="notify saving">
+					<span class="spinner"></span><span class="pe-log">Installing plugins, please wait.</span>
+				</div>
+				<div id="pe_theme_options_plugins__done" class="notify imported">
+					All plugins are active and updated to the latest version.
+				</div>
+				<div id="pe_theme_options_plugins__warning" class="notify warning">
+					Error occurred while performing the action
+					<span class="pe-log"></span>
+					Please try to install/activate/update the plugin manually.
+				</div>
+			</div>
+			<div class="pe-plugins-list">
+				<table class="pe-theme-bundled-plugins" id="pe-theme-bundled-plugins">
+
+					<!-- here it goes the class generated markup for the plugins table -->
+
+				</table>
+			</div>
+        </div>
+    </div>
+	<script type="text/javascript">jQuery("#pe_theme_options_plugins_").peFieldWPPlugins();</script>
+</div>
